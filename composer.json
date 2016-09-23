@@ -9,6 +9,11 @@
             "email": "paulo.tiago.pt@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
     "require": {
         "php": ">=5.5.0",
         "slim/slim": "^3.1",
