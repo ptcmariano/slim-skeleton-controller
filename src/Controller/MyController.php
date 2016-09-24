@@ -12,7 +12,7 @@ class MyController {
    }
 
    public function hello($request, $response, $args) {
-        //$registros = $this->ci->get('database')->table("hello")->where(1, 1)->get();
+        $args['registros'] = $this->ci->get('database')->table("hello")->where('id', '>', 0)->get();
         $this->ci->get('renderer')->render($response, "index.html", $args);
    }
 }
