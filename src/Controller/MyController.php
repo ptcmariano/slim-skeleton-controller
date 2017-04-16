@@ -12,7 +12,8 @@ class MyController {
    }
 
    public function hello($request, $response, $args) {
-        $args['registros'] = $this->ci->get('database')->table("hello")->where('id', '>', 0)->get();
+        $hello = \App\Model\Hello::all();
+        $args['registros'] = $hello;
         $this->ci->get('renderer')->render($response, "index.html", $args);
    }
 }
